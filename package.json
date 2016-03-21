@@ -1,6 +1,6 @@
 {
   "name": "webpack-link",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "webpack alternative to npm link",
   "main": "index.js",
   "scripts": {
@@ -17,5 +17,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/thebeansgroup/webpack-link.git"
+  },
+  "dependencies": {
+    "object-assign": "^4.0.1"
   }
 }
