@@ -8,6 +8,12 @@ Uses Webpack alias options to resolve a module to a local path for development.
 `$ npm install webpack-link --save-dev`
 
 ### Usage
+
+By default, adding a config doesn't turn on the linked module. To turn it on for a build you need to pass webpack a `--link` parameter with a comma separated list of modules to be linked.
+
+eg: `webpack --link=localModule`
+
+#### config
 ```
 var path = require('path'),
     webpackLinkPlugin = require('webpack-link')
