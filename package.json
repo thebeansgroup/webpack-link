@@ -1,0 +1,17 @@
+{
+  "name": "webpack-link",
+  "version": "0.0.1",
+  "description": "webpack alternative to npm link",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "link",
+    "npm-link"
+  ],
+  "author": "Sam Ternent",
+  "license": "ISC"
+}
