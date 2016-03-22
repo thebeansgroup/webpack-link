@@ -22,7 +22,7 @@ module.exports = {
   entry: "src/index.js",
   plugins: [
     new webpackLinkPlugin({
-      localModule: path.resolve(__dirname, '../localModule/src')
+      localModule: path.resolve(__dirname, '../localModule')
     })
   ],
   output: {
@@ -42,8 +42,9 @@ module.exports = {
   plugins: [
     new webpackLinkPlugin({
       localModule: [
-        path.resolve(__dirname, '../localeModule/src'),
+        path.resolve(__dirname, '../localeModule'),
         {
+          entry: path.resolve(__dirname, '../localeModule/src'),
           test: /\.js$/,
           loader: "babel-loader?presets[]=es2015"
         }

@@ -16,9 +16,12 @@ var formatSettings = function (option) {
   return {
     path: option[0],
     loader: assign(
-      option[1],
-      { include: [option[0]] }
-    )
+      {
+        test: option[1].test,
+        loader: option[1].loader,
+      },
+      { include: [option[1].entry || option[0]] }
+    ),
   }
 }
 

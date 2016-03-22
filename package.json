@@ -1,6 +1,6 @@
 {
   "name": "webpack-link",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "webpack alternative to npm link",
   "main": "index.js",
   "scripts": {
