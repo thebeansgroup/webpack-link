@@ -36,11 +36,10 @@ function WebpackLinkPlugin(options) {
 WebpackLinkPlugin.prototype.apply = function(compiler) {
   var options = this.options;
   var modules = this.modules;
-  if (!modules || !options) { return }
-
+  if (!modules || !options || modules.length === 0) { return }
   for (var key in options) {
     if (!options.hasOwnProperty(key)) continue;
-    if (key.indexOf(modules) > -1) continue;
+    if (modules.indexOf(key) < 0) continue;
 
     var settings = formatSettings(options[key]);
     compiler.options.resolve.alias[key] = settings.path;
