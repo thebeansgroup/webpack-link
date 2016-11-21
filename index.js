@@ -3,7 +3,7 @@ var assign = require('object-assign');
 var getCLIOptions = function () {
   var modules = [];
   process.argv.forEach(function (val, index, array) {
-    if (val.indexOf('--link') > -1) {
+    if (val.indexOf('--link') > -1 || val.indexOf('--env.link') > -1) {
       var args = val.split('=')[1];
       if (args) { modules = args.split(',') }
     }
